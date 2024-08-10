@@ -275,7 +275,7 @@ footer {
     filter: drop-shadow(0px 5px 5px rgb(88, 88, 88));
     rotate: -5deg;
 }
-
+/* Texto de video */
 #hero {
     position: relative;
     min-width: 100%;
@@ -302,9 +302,9 @@ footer {
 }
 
 
+/* gradiente subtitulos */
 h2 {
     padding-bottom: 1rem;
-    /* gradiente subtitulos */
     background: linear-gradient(90deg, #ea6302 0%, #f0e508 100%);
     background-clip: text;
     color: transparent;
@@ -339,6 +339,8 @@ h2 {
         blink-caret .75s step-end infinite;
 }
 
+
+
 /* The typing effect */
 @keyframes typing {
     from {
@@ -365,6 +367,7 @@ h2 {
 
 /* responsive */
 
+
 @media (max-width: 768px) {
     .responsive-header {
         display: flex;
@@ -378,13 +381,16 @@ h2 {
     .cb-card-wrapper {
         flex-direction: column;
     }
-    .responsive-proyectos{
+    .cb-proyectos {
         display: none;
     }
-    
-    
 }
-/* Style the form row */
+@media (min-width: 800px) {
+    .responsive-proyecto {
+        display: none;
+    }
+}
+    /* Style the form row */
 .form-row {
     display: flex;
     flex-wrap: wrap;
