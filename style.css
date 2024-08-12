@@ -134,7 +134,8 @@ footer {
 
 /* tarjertas de servicios */
 .cb-card-wrapper {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     justify-content: center;
     gap: 1rem;
     padding: 0rem 2rem 0rem 2rem;
@@ -142,8 +143,15 @@ footer {
     img {
         height: 150px;
         width: auto;
+        max-width: 200px;
         
     }
+}
+.cb-nosotros{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: center;
 }
 
 .cb-card {
@@ -171,7 +179,9 @@ footer {
 /* Nosotros */
 .cb-card-equipe {
     display: flex;
+    min-width: 300px;
     flex-direction: column;
+    width: 40%;
     align-items: center;
     padding: 1rem;
     border-radius: 15px;
@@ -364,6 +374,12 @@ h2 {
         border-color: rgb(242, 158, 2);
     }
 }
+/* Style the form row */
+.form-row {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+}
 
 /* responsive */
 
@@ -379,22 +395,21 @@ h2 {
     }
 
     .cb-card-wrapper {
-        flex-direction: column;
+        grid-template-columns: 1fr;
     }
     .cb-proyectos {
         display: none;
+    }
+    .cb-nosotros {
+        flex-wrap: wrap;
+        img{
+            width: 90%;}
     }
 }
 @media (min-width: 800px) {
     .responsive-proyecto {
         display: none;
     }
-}
-    /* Style the form row */
-.form-row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
 }
 
 /* Style the form groups */
