@@ -1,0 +1,438 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Source Code Pro", monospace;
+
+}
+
+
+body {
+    background-image: url(images/computer-program-coding-screen.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+/* Estilo de hipervinculos */
+a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+a:hover {
+    text-decoration: underline;
+    background-color: transparent,
+}
+
+section {
+    padding: 2rem 0rem 2rem 0rem;
+    text-align: center;
+    background: #ffffff8d;
+    
+}
+
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    
+}
+
+
+
+
+li {
+    list-style: none;
+    padding: 10px;
+    display: inline-block;
+    
+}
+footer {
+    padding: 2rem 0rem 2rem 0rem;
+    text-align: center;
+    color: aliceblue;
+}
+
+.responsive-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.navigation {
+    min-width: 100px;
+    padding: 0.5rem;
+}
+
+.formControl {
+    display: flex;
+    align-items: center;
+    border: 1px solid white;
+    overflow: hidden;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    
+    input {
+        border: 0;
+        padding: 1rem;
+        flex: 1;
+    }
+    
+    button {
+        border: 0;
+        padding: 1rem;
+    }
+}
+
+.cb-icon {
+    width: auto;
+    height: 10rem;
+    transition: transform 0.3s ease-in-out;
+}
+
+.cb-icon:hover {
+    transform: scale(1.2);
+}
+
+.cb-bg-gray {
+    background-color: transparent;
+    color: white;
+}
+
+.display-none {
+    display: none;
+}
+
+/* tamaño y clase de los logos */
+
+.logo-iso {
+    height: 100px;
+    width: auto;
+    margin-right: 1rem;
+    padding: 20px;
+}
+
+/* tarjertas de servicios */
+.cb-card-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    gap: 1rem;
+    padding: 0rem 2rem 0rem 2rem;
+    
+    img {
+        height: 150px;
+        width: auto;
+        max-width: 200px;
+        
+    }
+}
+.cb-nosotros{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: center;
+}
+
+.cb-card {
+    background-color: rgba(255, 255, 255, 0.209);
+    align-items: center;
+    padding: 1rem;
+    border-radius: 15px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    position:relative;
+    
+    h3 {
+        margin-bottom: 1rem;
+        margin-top: 0.5rem;
+    }
+}
+
+.grid-3col {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 2rem;
+    gap: 20px;
+}
+
+/* Nosotros */
+.cb-card-equipe {
+    display: flex;
+    min-width: 300px;
+    flex-direction: column;
+    width: 40%;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 15px;
+    /* box-shadow: 0 0 5px rgba(255, 255, 255, 0.3); */
+    text-align: left;
+    position: relative;
+    background-color: rgb(0, 0, 0);    
+}
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+.cb-card-equipe::after, .cb-card-equipe::before {
+    content:"";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top:50%;
+    left:50%;
+    background: linear-gradient(var(--angle), #a813c2 0%, #12d8ff 100%);
+    transform: translate(-50%,-50%);
+    border-radius: 15px;
+    padding: 3px;
+    z-index: -1;
+    animation: 10s spin infinite linear;
+}
+.cb-card-equipe::before {
+    filter: blur(1.5rem);
+    opacity: 0.7;
+}
+
+@keyframes spin {
+    from {
+        --angle: 0deg;
+    }
+    to {
+        --angle: 360deg;
+    }
+}
+
+
+.cb-proyectos {
+    background-color: rgba(255, 255, 255, 0.432);
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    
+    img {
+        width: 100%;
+        height: auto;
+    }
+    
+    h3,
+    p {
+        padding: 1rem;
+        
+    }
+    
+    h3:hover:after {
+        content: " />";
+        color: rgb(204, 134, 5);
+    }
+    
+    h3:hover:before {
+        content: "<";
+        color: rgb(204, 134, 5);
+    }
+}
+
+/* redes sociales */
+.redes {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 20px;
+    
+    img {
+        height: auto;
+        width: 50%;
+        transition: transform 0.3s ease-in-out;
+    }
+    
+    img:hover {
+        transform: scale(1.2);
+    }
+}
+
+.social {
+    height: auto;
+    width: 28%;
+
+    
+    transition: all 0.3s ease-in-out;
+}
+.social:hover{
+    transform: scale(1.2);
+    filter: drop-shadow(0px 5px 5px rgb(88, 88, 88));
+    rotate: -5deg;
+}
+/* Texto de video */
+#hero {
+    position: relative;
+    min-width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.heroText {
+    position: absolute;
+    top: 60%;
+
+    /* Texto Grediente */
+    h1{background: linear-gradient(90deg, #a813c2 0%, #12d8ff 100%);
+        background-clip: text;
+        color: transparent;
+        text-align: left;
+        font-weight: 1000;
+        
+        }
+    
+    
+}
+
+
+/* gradiente subtitulos */
+h2 {
+    padding-bottom: 1rem;
+    background: linear-gradient(90deg, #ea6302 0%, #f0e508 100%);
+    background-clip: text;
+    color: transparent;
+    text-align: center;
+    font-size: 3rem;
+    line-height: 1.5;
+    opacity: overlay;
+}
+
+.letter-1 {
+    color: rgb(224, 185, 9);
+}
+.letter-2 {
+    color: rgb(3, 211, 226);
+}
+.typewritter {
+    font-size: 1.5em;
+    color: rgb(1, 149, 3);
+    display: inline-block;
+    overflow: hidden;
+    /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange;
+    /* The typwriter cursor */
+    white-space: wrap;
+    /* Keeps the content on a single line */
+    margin: 0 auto;
+    /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em;
+    /* Adjust as needed */
+    animation:
+        typing 3.5s steps(80, end),
+        blink-caret .75s step-end infinite;
+}
+
+
+
+/* The typing effect */
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: rgb(242, 158, 2);
+    }
+}
+/* Style the form row */
+.form-row {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+}
+
+/* responsive */
+
+
+@media (max-width: 768px) {
+    .responsive-header {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cb-logos {
+        flex-direction: column;
+    }
+
+    .cb-card-wrapper {
+        grid-template-columns: 1fr;
+    }
+    .cb-proyectos {
+        display: none;
+    }
+    .cb-nosotros {
+        flex-wrap: wrap;
+        img{
+            width: 90%;}
+    }
+}
+@media (min-width: 800px) {
+    .responsive-proyecto {
+        display: none;
+    }
+}
+
+/* Style the form groups */
+.form-group {
+    flex: 1 0 48%;
+    margin-bottom: 20px;
+}
+
+/* Style the input fields in the contact form */
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Style the submit button in the contact form */
+button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049;
+}
