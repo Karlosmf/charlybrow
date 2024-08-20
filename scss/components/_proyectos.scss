@@ -1,0 +1,30 @@
+.cb-proyectos {
+    background-color: $color_bk_card;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 0 5px $color_back;
+    text-align: center;
+    
+    img {
+        width: 100%;
+        height: auto;
+    }
+    
+    h3,
+    p {
+        padding: 1rem;
+        
+    }
+    
+    h3:hover:after {
+        content: " />";
+        color: $color_letter-1;
+    }
+    
+    h3:hover:before {
+        content: "<";
+        color: $color_letter-1;
+    }
+}

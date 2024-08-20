@@ -1,0 +1,66 @@
+.cb-card-equipe {
+    display: flex;
+    min-width: 300px;
+    flex-direction: column;
+    width: 40%;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 15px;
+    /* box-shadow: 0 0 5px rgba(255, 255, 255, 0.3); */
+    text-align: left;
+    position: relative;
+    background-color: $color_back;  
+}
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+.cb-card-equipe::after, .cb-card-equipe::before {
+    content:"";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top:50%;
+    left:50%;
+    background: linear-gradient(var(--angle), $color_gradient1 0%, $color_gradient2 100%);
+    transform: translate(-50%,-50%);
+    border-radius: 15px;
+    padding: 3px;
+    z-index: -1;
+    animation: 10s spin infinite linear;
+}
+.cb-card-equipe::before {
+    filter: blur(1.5rem);
+    opacity: 0.7;
+}
+.cb-nosotros{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: center;
+}
+
+.cb-bg-gray {
+    background-color: transparent;
+    color: $color_white;
+}
+
+
+.grid-3col {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 2rem;
+    gap: 20px;
+}
+
+/* Nosotros */
+
+@keyframes spin {
+    from {
+        --angle: 0deg;
+    }
+    to {
+        --angle: 360deg;
+    }
+}

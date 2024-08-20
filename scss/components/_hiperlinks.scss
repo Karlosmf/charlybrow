@@ -1,0 +1,11 @@
+a {
+    text-decoration: none;
+    color: $color_white;
+    padding: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+a:hover {
+    text-decoration: underline;
+    background-color: transparent,
+}
