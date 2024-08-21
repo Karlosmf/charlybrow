@@ -1,19 +1,3 @@
-.redes {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    padding: 20px;
-    
-    img {
-        height: auto;
-        width: 50%;
-        transition: transform 0.3s ease-in-out;
-    }
-    
-    img:hover {
-        transform: scale(1.2);
-    }
-}
 
 .social {
     height: auto;
@@ -27,3 +11,4 @@
     filter: drop-shadow(0px 5px 5px $color_bk_card);
     rotate: -5deg;
 }
+    

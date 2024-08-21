@@ -4,34 +4,92 @@
     justify-content: center;
     gap: 1rem;
     padding: 0rem 2rem 0rem 2rem;
-    
+    backdrop-filter: blur(10px);
+
     img {
         height: 150px;
         width: auto;
         max-width: 200px;
-        
+
     }
-    .cb-card {
-        background-color: $color_bk_card;
-        align-items: center;
-        padding: 1rem;
-        border-radius: 15px;
-        box-shadow: 0 0 5px $color_back;
-        text-align: center;
-        position:relative;
-        
-        h3 {
-            margin-bottom: 1rem;
-            margin-top: 0.5rem;
-        }
-        .cb-icon {
-            width: auto;
-            height: 10rem;
-            transition: transform 0.3s ease-in-out;
-        }
-        
-        .cb-icon:hover {
-            transform: scale(1.2);
-        }
+
+    // .cb-card {
+    //     background-color: $color_bk_card;
+    //     align-items: center;
+    //     padding: 1rem;
+    //     border-radius: 15px;
+    //     box-shadow: 0 0 5px $color_back;
+    //     text-align: center;
+    //     position:relative;
+
+    //     h3 {
+    //         margin-bottom: 1rem;
+    //         margin-top: 0.5rem;
+    //     }
+    //     .cb-icon {
+    //         width: auto;
+    //         height: 10rem;
+    //         transition: transform 0.3s ease-in-out;
+    //     }
+
+    //     .cb-icon:hover {
+    //         transform: scale(1.2);
+    //     }
+    // }
+}
+
+@mixin cb-card($colorblak) {
+    background-color: $color_bk_card;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 15px;
+    text-align: center;
+    position: relative;
+
+    h3 {
+        margin-bottom: 1rem;
+        margin-top: 0.5rem;
     }
+
+    .cb-icon {
+        width: auto;
+        height: 10rem;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .cb-icon:hover {
+         transform: scale(1.2);
+    }
+}
+
+.cb-card-aqua {
+    @include cb-card($color_bk_card);
+    background-color: rgba(0, 30, 255, 0.204);
+    box-shadow: 0 0 1rem rgb(2, 19, 147);
+    h3 {
+        color: $color_white;
+    }
+    p {
+        color: $color_white;
+    }
+}
+
+.cb-card-violet {
+    @include cb-card($color_bk_card);
+    background-color: rgba(255, 0, 255, 0.149);
+    box-shadow: 0 0 1rem rgb(129, 1, 129);
+    h3 {
+        color: $color_white;
+    }
+    p {
+        color: $color_white;
+    }
+    
+}
+
+.cb-card-orange {
+    @include cb-card($color_bk_card);
+    background-color: rgba(255, 115, 0, 0.172);
+    box-shadow: 0 0 1rem rgb(142, 67, 5);
+    
 }
